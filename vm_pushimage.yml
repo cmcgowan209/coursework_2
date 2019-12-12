@@ -1,0 +1,14 @@
+- name: Run Docker App on Node
+  hosts: azure
+  user: azureuser
+  become: yes
+
+  vars:
+    DockerID: cmcgow209
+
+  tasks:
+  - name: Pull
+    command: docker pull cmcgow209/coursework2:latest
+
+  - name: Push docker image to container
+    command: docker container run --rm -d -p 80:80 --name conors_container cmcgow209/coursework2:latest
