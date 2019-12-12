@@ -11,4 +11,4 @@
     command: docker pull cmcgow209/coursework2:latest
 
   - name: Push docker image to container
-    command: docker container run --rm -d -p 80:80 --name conors_container cmcgow209/coursework2:latest
+    command: docker container run --rm -d -p 8080:8080 --name conors_container cmcgow209/coursework2:latest
